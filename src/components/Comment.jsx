@@ -1,3 +1,6 @@
+import Image from "next/image";
+import { Reply } from "@/components/Reply";
+
 export const Comment = ({
   userImagePath,
   username,
