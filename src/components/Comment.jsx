@@ -1,16 +1,16 @@
+import Image from "next/image";
+import { Reply } from "@/components/Reply";
 export const Comment = ({
   userImagePath,
   username,
-  commentText,
   likeNum,
+  commentText,
   replies,
 }) => {
-  console.log(replies);
-
   return (
-    <div className="d-flex p-3 gap-2 align-items-center border-bottom">
-      <div className="d-flex gap-2 my-2">
-        <Image
+    <div>
+      <div>
+        <Reply
           src={userImagePath}
           width={48}
           height={48}
@@ -34,16 +34,19 @@ export const Comment = ({
         </div>
       </div>
       <div>
-        {replies &&
-          replies.map((reply) => (
-            <Reply
-              key={reply.replyText}
-              userImagePath={reply.userImagePath}
-              username={reply.username}
-              replyText={reply.replyText}
-              likeNum={reply.likeNum}
-            />
-          ))}
+        {replies !== undefined
+          ? replies.map((data) => {
+              return (
+                <Reply
+                  key={data.username}
+                  username={data.username}
+                  userImagePath={data.userImagePath}
+                  replyText={data.replyText}
+                  likeNum={data.likeNum}
+                />
+              );
+            })
+          : {}}
       </div>
     </div>
   );

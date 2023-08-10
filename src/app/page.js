@@ -2,9 +2,7 @@
 
 import { Comment } from "@/components/Comment";
 import { PostOwner } from "@/components/PostOwner";
-import { Reply } from "@/components/Reply";
 import { comments } from "@/libs/comments";
-import Image from "next/image";
 
 export default function HomePage() {
   return (

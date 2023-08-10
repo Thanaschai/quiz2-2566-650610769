@@ -1,3 +1,4 @@
+import Image from "next/image";
 export const Reply = ({ userImagePath, username, replyText, likeNum }) => {
   return (
     <div>
@@ -10,7 +11,6 @@ export const Reply = ({ userImagePath, username, replyText, likeNum }) => {
           style={{ objectFit: "cover" }}
           alt="Reply Profile picture"
         />
-
         <div
           className="rounded rounded-3 p-2"
           style={{ backgroundColor: "#E5E7EB" }}
