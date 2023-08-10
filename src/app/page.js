@@ -1,5 +1,11 @@
 "use client";
 
+import { Comment } from "@/components/Comment";
+import { PostOwner } from "@/components/PostOwner";
+import { Reply } from "@/components/Reply";
+import { comments } from "@/libs/comments";
+import Image from "next/image";
+
 export default function HomePage() {
   return (
     <div
@@ -9,8 +15,7 @@ export default function HomePage() {
       {/* Entire App Container */}
       <div
         style={{ maxWidth: "700px" }}
-        className="mx-auto p-3 rounded rounded-3
-         shadow-sm bg-white"
+        className="mx-auto p-3 rounded rounded-3 shadow-sm bg-white"
       >
         {/* Post Owner Example*/}
 
